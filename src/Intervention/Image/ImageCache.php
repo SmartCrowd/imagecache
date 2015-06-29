@@ -69,8 +69,9 @@ class ImageCache
             if (is_a($cache, 'Illuminate\Cache\CacheManager')) {
 
                 // add laravel cache
-                $this->cache = $cache;
-
+                $cache_driver = config('imagecache.cache_driver');
+                $this->cache  = $cache_driver ? $cache->driver($cache_driver) : $cache;
+                
             } else {
                     
                 // define path in filesystem
