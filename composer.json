@@ -27,5 +27,11 @@
             "Intervention\\Image\\": "src/Intervention/Image"
         }
     },
+        "repositories": [
+      {
+        "type": "vcs",
+        "url": "git@github.com:SmartCrowd/image.git"
+      }
+    ],
     "minimum-stability": "stable"
 }
